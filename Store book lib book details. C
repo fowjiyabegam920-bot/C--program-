@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Structure definition
+struct Book {
+    int bookId;
+    char title[30];
+    char author[30];
+};
+
+int main() {
+    struct Book b;
+
+    printf("Enter Book ID: ");
+    scanf("%d", &b.bookId);
+
+    printf("Enter Book Title: ");
+    scanf("%s", b.title);
+
+    printf("Enter Author Name: ");
+    scanf("%s", b.author);
+
+    printf("\n--- Library Book Details ---\n");
+    printf("Book ID   : %d\n", b.bookId);
+    printf("Title     : %s\n", b.title);
+    printf("Author    : %s\n", b.author);
+
+    return 0;
+}
