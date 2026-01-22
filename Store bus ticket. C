@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+// Structure definition
+struct BusTicket {
+    int ticketNo;
+    char passengerName[20];
+    char source[20];
+    char destination[20];
+    float fare;
+};
+
+int main() {
+    struct BusTicket t;
+
+    printf("Enter Ticket Number: ");
+    scanf("%d", &t.ticketNo);
+
+    printf("Enter Passenger Name: ");
+    scanf("%s", t.passengerName);
+
+    printf("Enter Source: ");
+    scanf("%s", t.source);
+
+    printf("Enter Destination: ");
+    scanf("%s", t.destination);
+
+    printf("Enter Fare: ");
+    scanf("%f", &t.fare);
+
+    printf("\n--- Bus Ticket Details ---\n");
+    printf("Ticket No      : %d\n", t.ticketNo);
+    printf("Passenger Name : %s\n", t.passengerName);
+    printf("Source         : %s\n", t.source);
+    printf("Destination    : %s\n", t.destination);
+    printf("Fare           : %.2f\n", t.fare);
+
+    return 0;
+}
