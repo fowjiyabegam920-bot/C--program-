@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+// Structure definition
+struct Student {
+    char name[20];
+    int marks1;
+    int marks2;
+    int marks3;
+    int total;
+};
+
+int main() {
+    struct Student s;
+
+    printf("Enter Student Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter Marks for Subject 1: ");
+    scanf("%d", &s.marks1);
+
+    printf("Enter Marks for Subject 2: ");
+    scanf("%d", &s.marks2);
+
+    printf("Enter Marks for Subject 3: ");
+    scanf("%d", &s.marks3);
+
+    // Calculate total marks
+    s.total = s.marks1 + s.marks2 + s.marks3;
+
+    printf("\n--- Student Details ---\n");
+    printf("Name        : %s\n", s.name);
+    printf("Total Marks : %d\n", s.total);
+
+    return 0;
+}
