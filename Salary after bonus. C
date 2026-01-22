@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float salary, bonus, totalSalary;
+
+    printf("Enter basic salary: ");
+    scanf("%f", &salary);
+
+    printf("Enter bonus amount: ");
+    scanf("%f", &bonus);
+
+    total Salary = salary + bonus;
+
+    printf("Total Salary = %.2f", total Salary);
+
+    return 0;
+}
