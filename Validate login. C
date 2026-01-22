@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function to validate login
+int validateLogin(char user[], char pass[]) {
+    if (strcmp(user, "admin") == 0 && strcmp(pass, "1234") == 0) {
+        return 1;   // valid
+    } else {
+        return 0;   // invalid
+    }
+}
+
+int main() {
+    char username[20], password[20];
+
+    printf("Enter username: ");
+    scanf("%s", username);
+
+    printf("Enter password: ");
+    scanf("%s", password);
+
+    if (validateLogin(username, password)) {
+        printf("Login Successful\n");
+    } else {
+        printf("Invalid Login\n");
+    }
+
+    return 0;
+}
