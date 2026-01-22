@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Structure for Bank Account
+struct BankAccount {
+    int accNo;
+    char name[20];
+    float balance;
+};
+
+int main() {
+    struct BankAccount b;
+
+    printf("Enter Account Number: ");
+    scanf("%d", &b.accNo);
+
+    printf("Enter Account Holder Name: ");
+    scanf("%s", b.name);
+
+    printf("Enter Balance: ");
+    scanf("%f", &b.balance);
+
+    printf("\n--- Bank Account Details ---\n");
+    printf("Account Number : %d\n", b.accNo);
+    printf("Name           : %s\n", b.name);
+    printf("Balance        : %.2f\n", b.balance);
+
+    return 0;
+}
