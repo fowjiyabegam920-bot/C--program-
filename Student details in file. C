@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+// Structure definition
+struct Student {
+    int rollNo;
+    char name[20];
+    float marks;
+};
+
+int main() {
+    struct Student s;
+    FILE *fp;
+
+    // Input student details
+    printf("Enter Roll Number: ");
+    scanf("%d", &s.rollNo);
+
+    printf("Enter Name: ");
+    scanf("%s", s.name);
+
+    printf("Enter Marks: ");
+    scanf("%f", &s.marks);
+
+    // Open file in write mode
+    fp = fopen("student.txt", "w");
+    if (fp == NULL) {
+        printf("Error opening file!\n");
+        return 1;
+    }
+
+    // Write student details to file
+    fprintf(fp, "Roll Number: %d\n", s.rollNo);
+    fprintf(fp, "Name       : %s\n", s.name);
+    fprintf(fp, "Marks      : %.2f\n", s.marks);
+
+    fclose(fp);
+
+    printf("Student details saved to file successfully.\n");
+
+    return 0;
+}
