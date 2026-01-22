@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() {
+    float expenses[5];  // e.g., Rent, Food, Transport, Bills, Others
+    float total = 0;
+    int i;
+
+    printf("Enter your 5 monthly expenses:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%f", &expenses[i]);
+        total += expenses[i];  // add each expense
+    }
+
+    printf("Total monthly expenses = %.2f\n", total);
+
+    return 0;
+}
