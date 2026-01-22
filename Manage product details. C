@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Structure definition
+struct Product {
+    int productId;
+    char name[20];
+    float price;
+};
+
+int main() {
+    struct Product p;
+
+    printf("Enter Product ID: ");
+    scanf("%d", &p.productId);
+
+    printf("Enter Product Name: ");
+    scanf("%s", p.name);
+
+    printf("Enter Product Price: ");
+    scanf("%f", &p.price);
+
+    printf("\n--- Product Details ---\n");
+    printf("Product ID    : %d\n", p.productId);
+    printf("Name          : %s\n", p.name);
+    printf("Price         : %.2f\n", p.price);
+
+    return 0;
+}
